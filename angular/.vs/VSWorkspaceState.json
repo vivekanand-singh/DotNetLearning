@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\e2e",
+    "\\e2e\\src",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\payment-details",
+    "\\src\\app\\payment-details\\payment-detail",
+    "\\src\\app\\shared"
+  ],
+  "SelectedNode": "\\e2e\\protractor.conf.js",
+  "PreviewInSolutionExplorer": false
+}
