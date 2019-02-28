@@ -9,6 +9,6 @@
     "\\src\\app\\payment-details\\payment-detail",
     "\\src\\app\\shared"
   ],
-  "SelectedNode": "\\e2e\\protractor.conf.js",
+  "SelectedNode": "\\src\\app\\shared\\payment-detail.service.ts",
   "PreviewInSolutionExplorer": false
 }

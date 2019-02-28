@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PaymentDetailService } from '../shared/payment-detail.service';
 
 @Component({
   selector: 'app-payment-details',
@@ -10,6 +11,7 @@ export class PaymentDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

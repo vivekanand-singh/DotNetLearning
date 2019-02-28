@@ -7,6 +7,9 @@ import { PaymentDetailListComponent } from './payment-details/payment-detail-lis
 import { PaymentDetailsComponent } from './payment-details/payment-details.component';
 import { PaymentDetailService } from './shared/payment-detail.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [PaymentDetailService],
   bootstrap: [AppComponent]
