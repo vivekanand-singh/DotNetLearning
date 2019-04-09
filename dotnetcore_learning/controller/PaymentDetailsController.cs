@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using dotnetcore_learning.model;
+using System.Web.Http.Description;
 
 namespace dotnetcore_learning.controller
 {
@@ -24,7 +25,7 @@ namespace dotnetcore_learning.controller
         [HttpGet]
         public IEnumerable<PaymentDetail> GetpaymentDetails()
         {
-            return _context.paymentDetails;
+            return _context.PaymentDetails;
         }
 
         // GET: api/PaymentDetails/5
@@ -36,7 +37,7 @@ namespace dotnetcore_learning.controller
                 return BadRequest(ModelState);
             }
 
-            var paymentDetail = await _context.paymentDetails.FindAsync(id);
+            var paymentDetail = await _context.PaymentDetails.FindAsync(id);
 
             if (paymentDetail == null)
             {
@@ -90,7 +91,7 @@ namespace dotnetcore_learning.controller
                 return BadRequest(ModelState);
             }
 
-            _context.paymentDetails.Add(paymentDetail);
+            _context.PaymentDetails.Add(paymentDetail);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetPaymentDetail", new { id = paymentDetail.paymentId }, paymentDetail);
@@ -105,13 +106,13 @@ namespace dotnetcore_learning.controller
                 return BadRequest(ModelState);
             }
 
-            var paymentDetail = await _context.paymentDetails.FindAsync(id);
+            var paymentDetail = await _context.PaymentDetails.FindAsync(id);
             if (paymentDetail == null)
             {
                 return NotFound();
             }
 
-            _context.paymentDetails.Remove(paymentDetail);
+            _context.PaymentDetails.Remove(paymentDetail);
             await _context.SaveChangesAsync();
 
             return Ok(paymentDetail);
@@ -119,7 +120,13 @@ namespace dotnetcore_learning.controller
 
         private bool PaymentDetailExists(int id)
         {
-            return _context.paymentDetails.Any(e => e.paymentId == id);
+            return _context.PaymentDetails.Any(e => e.paymentId == id);
+        }
+        [HttpGet("count")]
+        [ResponseType(typeof(string))]
+        public int GetCount()
+        {
+            return _context.PaymentDetails.Count();
         }
     }
 }
