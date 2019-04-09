@@ -1,14 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\e2e",
-    "\\e2e\\src",
     "\\src",
     "\\src\\app",
     "\\src\\app\\payment-details",
     "\\src\\app\\payment-details\\payment-detail",
+    "\\src\\app\\payment-details\\payment-detail-list",
     "\\src\\app\\shared"
   ],
-  "SelectedNode": "\\src\\app\\shared\\payment-detail.service.ts",
+  "SelectedNode": "\\src\\app\\payment-details\\payment-detail-list\\payment-detail-list.component.ts",
   "PreviewInSolutionExplorer": false
 }

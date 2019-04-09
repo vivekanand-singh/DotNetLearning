@@ -13,15 +13,15 @@ namespace dotnetcore_learning.model
         public int paymentId { get; set; }
         [Required]
         [Column(TypeName ="varchar(50)")]
-        public String cardOwner { get; set; }
+        public string cardOwner { get; set; }
         [Required]
         [Column(TypeName = "varchar(50)")]
-        public String cardNumber {get; set; }
+        public string cardNumber {get; set; }
         [Required]
         [Column(TypeName = "varchar(10)")]
-        public String expiryDate { get; set; }
+        public string expiryDate { get; set; }
         [Required]
         [Column(TypeName = "varchar(3)")]
-        public String cvv { get; set; }
+        public string cvv { get; set; }
     }
 }

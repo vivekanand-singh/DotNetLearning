@@ -35,8 +35,9 @@ namespace dotnetcore_learning
             });
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
             services.AddDbContext<PaymentContext>(Options => Options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+            services.AddCors();
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -54,7 +55,7 @@ namespace dotnetcore_learning
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseCors(Options => Options.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader());
             app.UseMvc();
         }
     }

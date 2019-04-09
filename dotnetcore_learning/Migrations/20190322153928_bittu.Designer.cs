@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dotnetcore_learning.model;
 
 namespace dotnetcore_learning.Migrations
 {
     [DbContext(typeof(PaymentContext))]
-    partial class PaymentContextModelSnapshot : ModelSnapshot
+    [Migration("20190322153928_bittu")]
+    partial class bittu
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
