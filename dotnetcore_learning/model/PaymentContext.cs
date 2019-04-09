@@ -13,6 +13,6 @@ namespace dotnetcore_learning.model
 
         }
 
-        public DbSet<PaymentDetail> paymentDetails { set; get; }
+        public DbSet<PaymentDetail> PaymentDetails { set; get; }
     }
 }
